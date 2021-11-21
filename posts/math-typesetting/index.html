@@ -3,18 +3,19 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>Math Typesetting | Blog Name</title>
+<title>Math Typesetting | 神奇宝贝大师的旅行日记</title>
 <meta name=keywords content>
 <meta name=description content="A brief guide to setup KaTeX">
 <meta name=author content="Hugo Authors">
 <link rel=canonical href=https://eiyouhe.com/posts/math-typesetting/>
+<meta name=google-site-verification content="blog">
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
 <script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://eiyouhe.com/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=https://eiyouhe.com/favicon-16x16.png>
-<link rel=icon type=image/png sizes=32x32 href=https://eiyouhe.com/favicon-32x32.png>
-<link rel=apple-touch-icon href=https://eiyouhe.com/apple-touch-icon.png>
-<link rel=mask-icon href=https://eiyouhe.com/safari-pinned-tab.svg>
+<link rel=icon href=https://eiyouhe.com/images/favicon.png>
+<link rel=icon type=image/png sizes=16x16 href=https://eiyouhe.com/images/favicon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://eiyouhe.com/images/favicon.png>
+<link rel=apple-touch-icon href=https://eiyouhe.com/images/favicon.png>
+<link rel=mask-icon href=https://eiyouhe.com/images/favicon.png>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.89.4">
@@ -25,28 +26,63 @@
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-213464061-1','auto'),ga('send','pageview'))</script><meta property="og:title" content="Math Typesetting">
 <meta property="og:description" content="A brief guide to setup KaTeX">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://eiyouhe.com/posts/math-typesetting/"><meta property="og:image" content="https://eiyouhe.com/papermod-cover.png"><meta property="article:section" content="posts">
+<meta property="og:url" content="https://eiyouhe.com/posts/math-typesetting/"><meta property="og:image" content="https://eiyouhe.com/images/head.png"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2019-03-08T00:00:00+00:00">
-<meta property="article:modified_time" content="2019-03-08T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-03-08T00:00:00+00:00"><meta property="og:site_name" content="神奇宝贝大师的旅行日记">
 <meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://eiyouhe.com/papermod-cover.png">
+<meta name=twitter:image content="https://eiyouhe.com/images/head.png">
 <meta name=twitter:title content="Math Typesetting">
 <meta name=twitter:description content="A brief guide to setup KaTeX">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://eiyouhe.com/posts/"},{"@type":"ListItem","position":3,"name":"Math Typesetting","item":"https://eiyouhe.com/posts/math-typesetting/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Math Typesetting","name":"Math Typesetting","description":"A brief guide to setup KaTeX","keywords":[],"articleBody":"Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.\nIn this example we will be using KaTeX\n Create a partial under /layouts/partials/math.html Within this partial reference the Auto-render Extension or host these scripts locally. Include the partial in your templates (extend_head.html) like so: refer ISSUE #236  {{ if or .Params.math .Site.Params.math }} {{ partial \"math.html\" . }} {{ end }}  To enable KaTex globally set the parameter math to true in a project’s configuration To enable KaTex on a per page basis include the parameter math: true in content files  Note: Use the online reference of Supported TeX Functions\n  Examples  Inline math: \\(\\varphi = \\dfrac{1+\\sqrt5}{2}= 1.6180339887…\\) Block math:\n$$ \\varphi = 1+\\frac{1} {1+\\frac{1} {1+\\frac{1} {1+\\cdots} } } $$\n","wordCount":"124","inLanguage":"zh","datePublished":"2019-03-08T00:00:00Z","dateModified":"2019-03-08T00:00:00Z","author":{"@type":"Person","name":"Hugo Authors"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://eiyouhe.com/posts/math-typesetting/"},"publisher":{"@type":"Organization","name":"Blog Name","logo":{"@type":"ImageObject","url":"https://eiyouhe.com/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Math Typesetting","name":"Math Typesetting","description":"A brief guide to setup KaTeX","keywords":[],"articleBody":"Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.\nIn this example we will be using KaTeX\n Create a partial under /layouts/partials/math.html Within this partial reference the Auto-render Extension or host these scripts locally. Include the partial in your templates (extend_head.html) like so: refer ISSUE #236  1 2 3  {{ if or .Params.math .Site.Params.math }} {{ partial \"math.html\" . }} {{ end }}    To enable KaTex globally set the parameter math to true in a project’s configuration To enable KaTex on a per page basis include the parameter math: true in content files  Note: Use the online reference of Supported TeX Functions\n  Examples  Inline math: \\(\\varphi = \\dfrac{1+\\sqrt5}{2}= 1.6180339887…\\) Block math:\n$$ \\varphi = 1+\\frac{1} {1+\\frac{1} {1+\\frac{1} {1+\\cdots} } } $$\n","wordCount":"127","inLanguage":"zh","datePublished":"2019-03-08T00:00:00Z","dateModified":"2019-03-08T00:00:00Z","author":{"@type":"Person","name":"Hugo Authors"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://eiyouhe.com/posts/math-typesetting/"},"publisher":{"@type":"Organization","name":"神奇宝贝大师的旅行日记","logo":{"@type":"ImageObject","url":"https://eiyouhe.com/images/favicon.png"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
-<a href=https://eiyouhe.com accesskey=h title="Blog Name (Alt + H)">Blog Name</a>
+<a href=https://eiyouhe.com accesskey=h title="神奇宝贝大师的旅行日记 (Alt + H)">神奇宝贝大师的旅行日记</a>
 <span class=logo-switches>
 <button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </button>
 </span>
 </div>
 <ul id=menu>
+<li>
+<a href=https://eiyouhe.com/categories title=分类>
+<span>分类</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/tags title=标签>
+<span>标签</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/series title=系列>
+<span>系列</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/archives title=归档>
+<span>归档</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com title=冠军>
+<span>冠军</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com title=救助可达鸭>
+<span>救助可达鸭</span>
+</a>
+</li>
+<li>
+<a href=https://zukan.pokemon.co.jp/ title=已抓住图鉴>
+<span>已抓住图鉴</span>
+</a>
+</li>
 </ul>
 </nav>
 </header>
@@ -82,10 +118,19 @@ A brief guide to setup KaTeX
 <li>Include the partial in your templates (<a href=../papermod/papermod-faq/#custom-head--footer><code>extend_head.html</code></a>) like so:</li>
 <li>refer <a href=https://github.com/adityatelange/hugo-PaperMod/issues/236>ISSUE #236</a></li>
 </ul>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#f92672>{{</span> <span style=color:#66d9ef>if</span> or .Params.math .Site.Params.math <span style=color:#f92672>}}</span>
-<span style=color:#f92672>{{</span> partial <span style=color:#e6db74>&#34;math.html&#34;</span> . <span style=color:#f92672>}}</span>
-<span style=color:#f92672>{{</span> end <span style=color:#f92672>}}</span>
-</code></pre></div><ul>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=o>{{</span> <span class=k>if</span> or .Params.math .Site.Params.math <span class=o>}}</span>
+<span class=o>{{</span> partial <span class=s2>&#34;math.html&#34;</span> . <span class=o>}}</span>
+<span class=o>{{</span> end <span class=o>}}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
@@ -133,7 +178,7 @@ $$</p>
 </article>
 </main>
 <footer class=footer>
-<span>&copy; 2021 <a href=https://eiyouhe.com>Blog Name</a></span>
+<span>&copy; 2021 <a href=https://eiyouhe.com>神奇宝贝大师的旅行日记</a></span>
 <span>
 Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
