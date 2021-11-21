@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://eiyouhe.com/posts/asdf/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/categories/123/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/categories/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/tags/first/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/series/myseries/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/posts/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/series/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/tags/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
     <loc>https://eiyouhe.com/posts/a/</loc>
   </url><url>
     <loc>https://eiyouhe.com/psyduck/</loc>
@@ -10,18 +37,6 @@
     <loc>https://eiyouhe.com/resume/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>https://eiyouhe.com/categories/</loc>
-  </url><url>
-    <loc>https://eiyouhe.com/posts/</loc>
-  </url><url>
-    <loc>https://eiyouhe.com/series/</loc>
-  </url><url>
-    <loc>https://eiyouhe.com/tags/</loc>
-  </url><url>
     <loc>https://eiyouhe.com/archives/</loc>
-  </url><url>
-    <loc>https://eiyouhe.com/search/</loc>
-  </url><url>
-    <loc>https://eiyouhe.com/</loc>
   </url>
 </urlset>
