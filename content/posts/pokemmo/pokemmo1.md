@@ -31,7 +31,7 @@ ShowPostNavLinks: true
 
 虾兵蟹将和鸭宝宝
 
-![img](/images/pokemmo/pokemon1-gt.png)
+![img](/images/pokemmo/pokemon1-red.png)
 
 在游戏里认识了一个小姐姐，名曰大红，没错我是旁边的大绿
 
