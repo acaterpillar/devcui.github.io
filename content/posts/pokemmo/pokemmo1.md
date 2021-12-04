@@ -26,12 +26,12 @@ ShowPostNavLinks: true
 
 今天冠军做了三只新的宝可梦
 
-![img](/static/images/pokemmo/pokemon1-xg.png)
-![img](/static/images/pokemmo/pokemon1-gt.png)
+![img](/images/pokemmo/pokemon1-xg.png)
+![img](/images/pokemmo/pokemon1-gt.png)
 
 虾兵蟹将和鸭宝宝
 
-![img](/static/images/pokemmo/pokemon1-gt.png)
+![img](/images/pokemmo/pokemon1-gt.png)
 
 在游戏里认识了一个小姐姐，名曰大红，没错我是旁边的大绿
 
