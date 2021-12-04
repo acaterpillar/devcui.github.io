@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eiyouhe.com/posts/asdf/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://eiyouhe.com/categories/123/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <loc>https://eiyouhe.com/posts/pokemmo/pokemmo1/</loc>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://eiyouhe.com/categories/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://eiyouhe.com/tags/first/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <loc>https://eiyouhe.com/categories/game/</loc>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://eiyouhe.com/series/myseries/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <loc>https://eiyouhe.com/tags/pokemmo/</loc>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/tags/pokemon/</loc>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://eiyouhe.com/posts/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://eiyouhe.com/series/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://eiyouhe.com/tags/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/series/%E5%86%A0%E5%86%9B%E5%92%8C%E4%BB%96%E7%9A%84%E5%AE%9D%E5%8F%AF%E6%A2%A6%E4%BB%AC/</loc>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://eiyouhe.com/tags/%E5%AE%9D%E5%8F%AF%E6%A2%A6/</loc>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://eiyouhe.com/</loc>
-    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://eiyouhe.com/posts/a/</loc>
+    <lastmod>2021-12-04T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://eiyouhe.com/psyduck/</loc>
     <priority>0</priority>
