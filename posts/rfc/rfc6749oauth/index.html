@@ -1,0 +1,401 @@
+<!doctype html><html lang=cn dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>RFC 6749 - OAuth 2.0 | 神奇宝贝大师的旅行日记</title>
+<meta name=keywords content="RFC,OAUTH">
+<meta name=description content="Desc Text.">
+<meta name=author content="cui">
+<link rel=canonical href=https://canonical.url/to/page>
+<meta name=google-site-verification content="blog">
+<meta name=yandex-verification content="blog">
+<meta name=msvalidate.01 content="blog">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<link rel=preload href=/images/favicon.png as=image>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://eiyouhe.com/images/favicon.png>
+<link rel=icon type=image/png sizes=16x16 href=https://eiyouhe.com/images/favicon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://eiyouhe.com/images/favicon.png>
+<link rel=apple-touch-icon href=https://eiyouhe.com/images/favicon.png>
+<link rel=mask-icon href=https://eiyouhe.com/images/favicon.png>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.89.4">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-213464061-1','auto'),ga('send','pageview'))</script><meta property="og:title" content="RFC 6749 - OAuth 2.0">
+<meta property="og:description" content="Desc Text.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://eiyouhe.com/posts/rfc/rfc6749oauth/"><meta property="og:image" content="https://eiyouhe.com/images/head.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-12-05T11:30:03+00:00">
+<meta property="article:modified_time" content="2021-12-05T11:30:03+00:00"><meta property="og:site_name" content="神奇宝贝大师的旅行日记">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://eiyouhe.com/images/head.png">
+<meta name=twitter:title content="RFC 6749 - OAuth 2.0">
+<meta name=twitter:description content="Desc Text.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://eiyouhe.com/posts/"},{"@type":"ListItem","position":3,"name":"RFC 6749 - OAuth 2.0","item":"https://eiyouhe.com/posts/rfc/rfc6749oauth/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"RFC 6749 - OAuth 2.0","name":"RFC 6749 - OAuth 2.0","description":"Desc Text.","keywords":["RFC","OAUTH"],"articleBody":"1.RFC 6749 RFC 6749 主要对 OAuth2 做出了一些规范规定，OAuth2 主要分为下列几种模式\n 授权码 隐藏式 密码式 客户端凭证  第三方应用申请令牌前，必须先到系统备案，拿到两个身份识别码\n client_id 客户端 ID client_secret 客户端密钥  2.授权码   1.A 网站跳转 B 网站\n1 2 3 4 5  https://b.com/oauth/authorize? response_type=code\u0026 client_id=CLIENT_ID\u0026 redirect_uri=CALLBACK_URL\u0026 scope=read    response_type 返回类型 client_id 客户端 ID redirect_uri 重定向地址 scope 权限范围    2.跳转 B 网站后用户点击授权，B 网站携带授权码跳转至 redirect_uri\n  1  https://a.com/callback?code=AUTHORIZATION_CODE       3.A 网站拿到授权码，在后端向 B 请求令牌\n1 2 3 4 5 6  https://b.com/oauth/token? client_id=CLIENT_ID\u0026 client_secret=CLIENT_SECRET\u0026 grant_type=authorization_code\u0026 code=AUTHORIZATION_CODE\u0026 redirect_uri=CALLBACK_URL     client_id 客户端 ID\n  client_secret 客户端密钥\n  grant_type 授权模式\n  code 授权码 “2.跳转 B 网站后用户点击授权，B 网站携带授权码跳转至 redirect_uri”\n 2.跳转 B 网站后用户点击授权，B 网站携带授权码跳转至 redirect_uri\n   redirect_uri 令牌颁发后的回调地址\n     B 网站拿到几个参数后，向 redirect_uri 接口发送一串数据\n1 2 3 4 5 6 7 8 9  { \"access_token\":\"ACCESS_TOKEN\", \"token_type\":\"bearer\", \"expires_in\":2592000, \"refresh_token\":\"REFRESH_TOKEN\", \"scope\":\"read\", \"uid\":100101, \"info\":{...} }       3.隐藏式   1.无后端模式，必须将令牌储存在前端\n  2.A 网站跳转到 B 网站授权用户数据给 A 网站使用。\n1 2 3 4 5  https://b.com/oauth/authorize? response_type=token\u0026 client_id=CLIENT_ID\u0026 redirect_uri=CALLBACK_URL\u0026 scope=read    response_type 为 token，要求直接返回令牌 client_id 客户端标识 redirect_uri 重定向地址 scope 授权范围    3.B 网站跳回 A 网站，直接给出 token\n1  https://a.com/callback#token=ACCESS_TOKEN   令牌位置是锚点，并不是 query_param 等，这里保证了中间传递过程中的安全性问题\n  4.密码式 直接使用用户名密码请求 JSON 接口\n1 2 3 4 5  https://oauth.b.com/token? grant_type=password\u0026 username=USERNAME\u0026 password=PASSWORD\u0026 client_id=CLIENT_ID   注意 grant_type 为 password 模式，最后拿到令牌相关的 JSON 数据\n5.客户端凭证 没有凭证模式适用于没有前端的命令行\n1 2 3 4  https://oauth.b.com/token? grant_type=client_credentials\u0026 client_id=CLIENT_ID\u0026 client_secret=CLIENT_SECRET    grant_type 为 client_credential client_id 客户端 id client_secret 客户端凭证  网站经过校验后直接给出令牌，这种令牌是应用级别的，而不是用户级别的。\n6.更新令牌 1 2 3 4 5  https://b.com/oauth/token? grant_type=refresh_token\u0026 client_id=CLIENT_ID\u0026 client_secret=CLIENT_SECRET\u0026 refresh_token=REFRESH_TOKEN    grant_type 为更新令牌模式 refresh_token 为前一次获取 Token 时给出的 refresh_token  ","wordCount":"203","inLanguage":"cn","datePublished":"2021-12-05T11:30:03Z","dateModified":"2021-12-05T11:30:03Z","author":{"@type":"Person","name":"cui"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://eiyouhe.com/posts/rfc/rfc6749oauth/"},"publisher":{"@type":"Organization","name":"神奇宝贝大师的旅行日记","logo":{"@type":"ImageObject","url":"https://eiyouhe.com/images/favicon.png"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://eiyouhe.com accesskey=h title="  (Alt + H)">
+<img src=/images/favicon.png alt=logo aria-label=logo height=35> </a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://eiyouhe.com/posts title=列表>
+<span>列表</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/categories title=分类>
+<span>分类</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/tags title=标签>
+<span>标签</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/series title=系列>
+<span>系列</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/archives title=归档>
+<span>归档</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/resume title=冠军>
+<span>冠军</span>
+</a>
+</li>
+<li>
+<a href=https://eiyouhe.com/psyduck title=救助可达鸭>
+<span>救助可达鸭</span>
+</a>
+</li>
+<li>
+<a href=https://zukan.pokemon.co.jp/ title=已抓住图鉴>
+<span>已抓住图鉴</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://eiyouhe.com>Home</a>&nbsp;»&nbsp;<a href=https://eiyouhe.com/posts/>Posts</a></div>
+<h1 class=post-title>
+RFC 6749 - OAuth 2.0
+</h1>
+<div class=post-description>
+Desc Text.
+</div>
+<div class=post-meta><span title="2021-12-05 11:30:03 +0000 UTC">December 5, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;cui&nbsp;|&nbsp;<a href=https://github.com/devcui/devcui.github.io/tree/master/content//posts/rfc/RFC6749OAUTH.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header> <div class=toc>
+<details>
+<summary accesskey=c title="(Alt + C)">
+<span class=details>Table of Contents</span>
+</summary>
+<div class=inner><ul>
+<li>
+<a href=#1rfc-6749 aria-label="1.RFC 6749">1.RFC 6749</a></li>
+<li>
+<a href=#2%e6%8e%88%e6%9d%83%e7%a0%81 aria-label=2.授权码>2.授权码</a></li>
+<li>
+<a href=#3%e9%9a%90%e8%97%8f%e5%bc%8f aria-label=3.隐藏式>3.隐藏式</a></li>
+<li>
+<a href=#4%e5%af%86%e7%a0%81%e5%bc%8f aria-label=4.密码式>4.密码式</a></li>
+<li>
+<a href=#5%e5%ae%a2%e6%88%b7%e7%ab%af%e5%87%ad%e8%af%81 aria-label=5.客户端凭证>5.客户端凭证</a></li>
+<li>
+<a href=#6%e6%9b%b4%e6%96%b0%e4%bb%a4%e7%89%8c aria-label=6.更新令牌>6.更新令牌</a>
+</li>
+</ul>
+</div>
+</details>
+</div>
+<div class=post-content><h1 id=1rfc-6749>1.RFC 6749<a hidden class=anchor aria-hidden=true href=#1rfc-6749>#</a></h1>
+<p>RFC 6749 主要对 OAuth2 做出了一些规范规定，OAuth2 主要分为下列几种模式</p>
+<ul>
+<li>授权码</li>
+<li>隐藏式</li>
+<li>密码式</li>
+<li>客户端凭证</li>
+</ul>
+<p>第三方应用申请令牌前，必须先到系统备案，拿到两个身份识别码</p>
+<ul>
+<li>client_id 客户端 ID</li>
+<li>client_secret 客户端密钥</li>
+</ul>
+<h1 id=2授权码>2.授权码<a hidden class=anchor aria-hidden=true href=#2授权码>#</a></h1>
+<ul>
+<li>
+<p>1.A 网站跳转 B 网站</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://b.com/oauth/authorize?
+  response_type=code&amp;
+  client_id=CLIENT_ID&amp;
+  redirect_uri=CALLBACK_URL&amp;
+  scope=read
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>response_type 返回类型</li>
+<li>client_id 客户端 ID</li>
+<li>redirect_uri 重定向地址</li>
+<li>scope 权限范围</li>
+</ul>
+</li>
+<li>
+<p>2.跳转 B 网站后用户点击授权，B 网站携带授权码跳转至 <code>redirect_uri</code></p>
+<ul>
+<li>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://a.com/callback?code=AUTHORIZATION_CODE
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>3.A 网站拿到授权码，在后端向 B 请求令牌</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://b.com/oauth/token?
+ client_id=CLIENT_ID&amp;
+ client_secret=CLIENT_SECRET&amp;
+ grant_type=authorization_code&amp;
+ code=AUTHORIZATION_CODE&amp;
+ redirect_uri=CALLBACK_URL
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>client_id 客户端 ID</p>
+</li>
+<li>
+<p>client_secret 客户端密钥</p>
+</li>
+<li>
+<p>grant_type 授权模式</p>
+</li>
+<li>
+<p>code 授权码 &ldquo;2.跳转 B 网站后用户点击授权，B 网站携带授权码跳转至 redirect_uri&rdquo;</p>
+<blockquote>
+<p>2.跳转 B 网站后用户点击授权，B 网站携带授权码跳转至 <code>redirect_uri</code></p>
+</blockquote>
+</li>
+<li>
+<p>redirect_uri 令牌颁发后的回调地址</p>
+</li>
+</ul>
+</li>
+<li>
+<ol start=4>
+<li>
+<p>B 网站拿到几个参数后，向 redirect_uri 接口发送一串数据</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>{
+  &#34;access_token&#34;:&#34;ACCESS_TOKEN&#34;,
+  &#34;token_type&#34;:&#34;bearer&#34;,
+  &#34;expires_in&#34;:2592000,
+  &#34;refresh_token&#34;:&#34;REFRESH_TOKEN&#34;,
+  &#34;scope&#34;:&#34;read&#34;,
+  &#34;uid&#34;:100101,
+  &#34;info&#34;:{...}
+}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+</ul>
+<h1 id=3隐藏式>3.隐藏式<a hidden class=anchor aria-hidden=true href=#3隐藏式>#</a></h1>
+<ul>
+<li>
+<p>1.无后端模式，必须将令牌储存在前端</p>
+</li>
+<li>
+<p>2.A 网站跳转到 B 网站授权用户数据给 A 网站使用。</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://b.com/oauth/authorize?
+  response_type=token&amp;
+  client_id=CLIENT_ID&amp;
+  redirect_uri=CALLBACK_URL&amp;
+  scope=read
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>response_type 为 token，要求直接返回令牌</li>
+<li>client_id 客户端标识</li>
+<li>redirect_uri 重定向地址</li>
+<li>scope 授权范围</li>
+</ul>
+</li>
+<li>
+<p>3.B 网站跳回 A 网站，直接给出 token</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://a.com/callback#token=ACCESS_TOKEN
+</code></pre></td></tr></table>
+</div>
+</div><p>令牌位置是锚点，并不是 query_param 等，这里保证了中间传递过程中的安全性问题</p>
+</li>
+</ul>
+<h1 id=4密码式>4.密码式<a hidden class=anchor aria-hidden=true href=#4密码式>#</a></h1>
+<p>直接使用用户名密码请求 JSON 接口</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://oauth.b.com/token?
+  grant_type=password&amp;
+  username=USERNAME&amp;
+  password=PASSWORD&amp;
+  client_id=CLIENT_ID
+</code></pre></td></tr></table>
+</div>
+</div><p>注意 <code>grant_type</code> 为 password 模式，最后拿到令牌相关的 JSON 数据</p>
+<h1 id=5客户端凭证>5.客户端凭证<a hidden class=anchor aria-hidden=true href=#5客户端凭证>#</a></h1>
+<p>没有凭证模式适用于没有前端的命令行</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://oauth.b.com/token?
+  grant_type=client_credentials&amp;
+  client_id=CLIENT_ID&amp;
+  client_secret=CLIENT_SECRET
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>grant_type 为 client_credential</li>
+<li>client_id 客户端 id</li>
+<li>client_secret 客户端凭证</li>
+</ul>
+<p>网站经过校验后直接给出令牌，这种令牌是应用级别的，而不是用户级别的。</p>
+<h1 id=6更新令牌>6.更新令牌<a hidden class=anchor aria-hidden=true href=#6更新令牌>#</a></h1>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>https://b.com/oauth/token?
+  grant_type=refresh_token&amp;
+  client_id=CLIENT_ID&amp;
+  client_secret=CLIENT_SECRET&amp;
+  refresh_token=REFRESH_TOKEN
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>grant_type 为更新令牌模式</li>
+<li>refresh_token 为前一次获取 Token 时给出的 refresh_token</li>
+</ul>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://eiyouhe.com/tags/rfc/>RFC</a></li>
+<li><a href=https://eiyouhe.com/tags/oauth/>OAUTH</a></li>
+</ul>
+<nav class=paginav>
+<a class=prev href=https://eiyouhe.com/posts/python/stcgal/>
+<span class=title>« </span>
+<br>
+<span>解析Stcgal</span>
+</a>
+<a class=next href=https://eiyouhe.com/posts/summary/year2020/>
+<span class=title> »</span>
+<br>
+<span>Year 2020</span>
+</a>
+</nav>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2021 <a href=https://eiyouhe.com>神奇宝贝大师的旅行日记</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

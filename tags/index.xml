@@ -11,6 +11,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 05 Dec 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://eiyouhe.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>8051</title>
+      <link>https://eiyouhe.com/tags/8051/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/8051/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angular</title>
+      <link>https://eiyouhe.com/tags/angular/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dart</title>
+      <link>https://eiyouhe.com/tags/dart/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/dart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flutter</title>
+      <link>https://eiyouhe.com/tags/flutter/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/flutter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>git</title>
       <link>https://eiyouhe.com/tags/git/</link>
       <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
@@ -29,11 +65,128 @@
     </item>
     
     <item>
+      <title>json</title>
+      <link>https://eiyouhe.com/tags/json/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>https://eiyouhe.com/tags/k8s/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mcu</title>
+      <link>https://eiyouhe.com/tags/mcu/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/mcu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://eiyouhe.com/tags/nodejs/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>https://eiyouhe.com/tags/npm/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OAUTH</title>
+      <link>https://eiyouhe.com/tags/oauth/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/oauth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prometheus</title>
+      <link>https://eiyouhe.com/tags/prometheus/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://eiyouhe.com/tags/python/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redis</title>
+      <link>https://eiyouhe.com/tags/redis/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RFC</title>
+      <link>https://eiyouhe.com/tags/rfc/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/rfc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>rsync</title>
       <link>https://eiyouhe.com/tags/rsync/</link>
       <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
       
       <guid>https://eiyouhe.com/tags/rsync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scripts</title>
+      <link>https://eiyouhe.com/tags/scripts/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/scripts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stcgal</title>
+      <link>https://eiyouhe.com/tags/stcgal/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/stcgal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>summary</title>
+      <link>https://eiyouhe.com/tags/summary/</link>
+      <pubDate>Sun, 05 Dec 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://eiyouhe.com/tags/summary/</guid>
       <description></description>
     </item>
     
