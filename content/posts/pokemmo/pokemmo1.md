@@ -4,7 +4,7 @@ date: 2021-12-04T11:30:03+00:00
 weight: 1
 tags: ["pokemmo","宝可梦","pokemon"]
 series: ["冠军和他的宝可梦们"]
-categories: ['game']
+categories: ['游戏']
 showToc: true
 TocOpen: false
 draft: false
