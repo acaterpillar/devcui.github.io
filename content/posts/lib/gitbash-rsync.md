@@ -1,7 +1,7 @@
 ---
 title: "Win下使用 GitBash下安装 rsync"
 date: 2021-12-05T11:30:03+00:00
-weight: 100
+weight: 600
 tags: ["git","git bash","rsync"]
 series: []
 categories: []
