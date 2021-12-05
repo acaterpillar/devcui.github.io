@@ -3,7 +3,7 @@ title: "基于Rymcu 8051 开发板的实验"
 date: 2021-12-05T11:30:03+00:00
 weight: 700
 tags: ["8051","mcu"]
-series: ["关于我的开发板爆炸那档事"]
+series: ["rE从零开始的电子世界生活"]
 categories: ["电子","单片机"]
 showToc: true
 TocOpen: false
