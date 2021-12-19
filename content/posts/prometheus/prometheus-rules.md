@@ -1,7 +1,6 @@
 ---
 title: "Prometheus Rules"
 date: 2021-12-05T11:30:03+00:00
-: 802
 tags: ["prometheus"]
 series: []
 categories: ["时序数据库","数据库"]

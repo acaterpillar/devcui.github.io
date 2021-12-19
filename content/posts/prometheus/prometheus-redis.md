@@ -1,7 +1,6 @@
 ---
 title: "Prometheus Redis"
 date: 2021-12-05T11:30:03+00:00
-: 803
 tags: ["prometheus","redis"]
 series: []
 categories: ["时序数据库","数据库"]

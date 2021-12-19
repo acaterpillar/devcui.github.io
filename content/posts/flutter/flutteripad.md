@@ -1,7 +1,6 @@
 ---
 title: "在IPAD上调试Flutter应用"
 date: 2021-12-05T11:30:03+00:00
-: 400
 tags: ["flutter","dart"]
 series: []
 categories: ["移动端"]

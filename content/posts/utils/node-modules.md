@@ -1,7 +1,6 @@
 ---
 title: "批量清理node_modules"
 date: 2021-12-05T11:30:03+00:00
-: 1200
 tags: ["npm","nodejs","scripts"]
 series: ["实用小脚本"]
 categories: ["脚本"]

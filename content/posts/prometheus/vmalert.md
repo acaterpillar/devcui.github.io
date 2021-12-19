@@ -1,7 +1,6 @@
 ---
 title: "Vmalert"
 date: 2021-12-05T11:30:03+00:00
-: 804
 tags: ["prometheus"]
 series: []
 categories: ["数据刮取"]
