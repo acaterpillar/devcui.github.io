@@ -1,7 +1,7 @@
 ---
 title: "JSONSchema"
 date: 2021-12-05T11:30:03+00:00
-weight: 300
+: 300
 tags: ["json"]
 series: []
 categories: ["数据结构"]

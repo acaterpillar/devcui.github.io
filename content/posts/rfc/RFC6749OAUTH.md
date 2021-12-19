@@ -1,7 +1,7 @@
 ---
 title: "RFC 6749 - OAuth 2.0"
 date: 2021-12-05T11:30:03+00:00
-weight: 1000
+: 1000
 tags: ["RFC","OAUTH"]
 series: ["关于RFC规约那档事"]
 categories: ["用户认证"]

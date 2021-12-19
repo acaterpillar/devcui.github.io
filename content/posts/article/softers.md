@@ -1,7 +1,7 @@
 ---
 title: "纪念逝去的软件先驱"
 date: 2021-12-05T11:30:03+00:00
-weight: 200
+: 200
 tags: []
 series: []
 categories: ["开源"]

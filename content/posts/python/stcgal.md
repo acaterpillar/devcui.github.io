@@ -1,7 +1,7 @@
 ---
 title: "解析Stcgal"
 date: 2021-12-05T11:30:03+00:00
-weight: 900
+: 900
 tags: ["stcgal","python","mcu"]
 series: []
 categories: ["烧录工具"]

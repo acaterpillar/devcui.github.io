@@ -1,7 +1,7 @@
 ---
 title: "K8S服务健康检测(探针)"
 date: 2021-12-05T11:30:03+00:00
-weight: 500
+: 500
 tags: ["k8s"]
 series: ["我的K8S进阶之路"]
 categories: ["云平台"]

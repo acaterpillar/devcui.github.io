@@ -1,7 +1,6 @@
 ---
 title: "Css the definitive guide 01"
 date: 2021-12-19T22:18:03+00:00
-weight: 1300
 tags: ["CSS"]
 series: ["CSS: The Definitive Guide"]
 categories: ["样式"]
