@@ -22,13 +22,17 @@ ShowPostNavLinks: true
 ---
 
 
-# Cascading Style Sheets the definitive guide visual presentation for the web day 01
+# Historical background created of the Cascading Style Sheets.
 
-Historical background created of the Cascading Style Sheets
+- Cascading Style Sheets was first proposed in 1994.
+	- The authors can only mark a piece of content as paragraph,as heading of some level, as preformatted text, or one of other element types.
+	- To configure browser to make all level-one-heading tiny and pink and all level-six headings huge and red, that only was users lookout.
 
-- Cascading Style Sheets was first proposed in 1994
-	- the authors can only mark a piece of content as paragraph,as heading of some level, as preformatted text, or one of other element types.
-	- to configure browser to make all level-one-heading tiny and pink and all level-six headings huge and red, that only was users lookout.
+So the CSS(Cascading Style Sheet) was introduced that goal to provide a simple,declarative styling language that was flexible for authors.
 
-So the CSS(Cascading Style Sheet) was introduced.
+- CSS1 was completed at the end of 1996.
+	- While the newly established CSS Working Group moved forward to the CSS2.
+	- There were also some unfortunate missteps in early implementations, such as the infamous discrepancy in box model implementations.
+
+
 
