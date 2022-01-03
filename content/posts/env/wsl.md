@@ -1,5 +1,5 @@
 ---
-title: "Win11下WSL开发环境"
+title: "WSL development environment under Win11"
 date: 2021-12-31T11:59:59+00:00
 tags: ["env"]
 series: ["某男子开发的日常"]
