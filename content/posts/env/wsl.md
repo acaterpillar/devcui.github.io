@@ -147,10 +147,10 @@ If you want to use vim/neovim then you can input `brew install neovim`
 
 ## Install `Vim-Plug`
 
-- 1.`mkdir ~/.config/nvim`
-- 2.`touch ~/.config/nvim/init.vim`
+- 1.`mkdir ~/.config/nvim -p`
+- 2.`touch ~/.config/nvim/init.vim -p`
 - 3.use `curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim` to install vim-plug
-- 4.`mkdir ~/.config/nvim/vim-plug`
+- 4.`mkdir ~/.config/nvim/vim-plug -p`
 - 5.`touch ~/.config/nvim/vim-plug/plugins.vim`
 
 Add the following to ~/.config/nvim/vim-plug/plugins.vim
